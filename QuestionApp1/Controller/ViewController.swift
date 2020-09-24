@@ -25,9 +25,13 @@ class ViewController: UIViewController, NowScoreDelegate {
     //IBActionで拾ってきた正答がどちら
     var pickedAnswer = false
     
+    //SoundFileクラスを宣言して実体化
+    var soundFile = SoundFile()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,6 +56,8 @@ class ViewController: UIViewController, NowScoreDelegate {
         
         if (sender as AnyObject).tag == 1 {
             
+           
+            
             pickedAnswer = true
     
             
@@ -59,12 +65,9 @@ class ViewController: UIViewController, NowScoreDelegate {
             
         }else if (sender as AnyObject).tag == 2{
             
+            
             pickedAnswer = false
-
             
-          
-            
-            //×ボタンの音声を流す
 
         }
         
@@ -81,9 +84,14 @@ class ViewController: UIViewController, NowScoreDelegate {
         if correctAnswer == pickedAnswer{
             print("正解")
             correctCount = correctCount + 1
+            //SoundFileクラスのplaySoundを使ってマルの音を鳴らす
+            soundFile.playSound(fileName: "maruSound", extentionName: "mp3")
         }else{
             print("間違い")
             wrongCount = wrongCount + 1
+            //バツの音を鳴らす
+            soundFile.playSound(fileName: "batsuSound", extentionName: "mp3")
+            
         }
     }
     
