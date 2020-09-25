@@ -24,6 +24,9 @@ class NextViewController: UIViewController {
     
     var delegate: NowScoreDelegate?
     
+    var soundFile = SoundFile()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +36,11 @@ class NextViewController: UIViewController {
         
         if UserDefaults.standard.object(forKey: "beforeCount") != nil {
             beforeCount = UserDefaults.standard.object(forKey: "beforeCount") as! Int
+        }
+        
+        //最高得点だったときに音を鳴らす
+        if beforeCount < correctedCount{
+            soundFile.playSound(fileName: "sound", extentionName: "mp3")
         }
         
     }

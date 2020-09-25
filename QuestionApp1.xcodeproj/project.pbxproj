@@ -23,6 +23,7 @@
 		85F4E760251C57A3008F4D77 /* SoundFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E75F251C57A3008F4D77 /* SoundFile.swift */; };
 		85F4E763251C6F92008F4D77 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E762251C6F92008F4D77 /* Animal.swift */; };
 		85F4E766251C6FFB008F4D77 /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E765251C6FFB008F4D77 /* Human.swift */; };
+		85FD482B251DBE3300A53CE7 /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FD482A251DBE3300A53CE7 /* ChangeColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		85F4E75F251C57A3008F4D77 /* SoundFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundFile.swift; sourceTree = "<group>"; };
 		85F4E762251C6F92008F4D77 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		85F4E765251C6FFB008F4D77 /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
+		85FD482A251DBE3300A53CE7 /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				8533710824FCF16C000C7780 /* ImagesList.swift */,
 				85F4E75F251C57A3008F4D77 /* SoundFile.swift */,
 				850FC69A251C728F00080D33 /* WithoutMP3.swift */,
+				85FD482A251DBE3300A53CE7 /* ChangeColor.swift */,
 				85F4E762251C6F92008F4D77 /* Animal.swift */,
 				85F4E765251C6FFB008F4D77 /* Human.swift */,
 			);
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85B650DC24F749EB00EAF374 /* ViewController.swift in Sources */,
+				85FD482B251DBE3300A53CE7 /* ChangeColor.swift in Sources */,
 				85F4E763251C6F92008F4D77 /* Animal.swift in Sources */,
 				85F4E760251C57A3008F4D77 /* SoundFile.swift in Sources */,
 				8533710924FCF16C000C7780 /* ImagesList.swift in Sources */,

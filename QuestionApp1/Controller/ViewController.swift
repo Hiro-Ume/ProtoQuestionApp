@@ -28,10 +28,18 @@ class ViewController: UIViewController, NowScoreDelegate {
     //SoundFileクラスを宣言して実体化
     var soundFile = SoundFile()
     
+    //ChangeColorクラスを宣言して実体化
+    var changeColor = ChangeColor()
+    var gradientLayer = CAGradientLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        imageView.layer.cornerRadius = 20.0
+        gradientLayer = changeColor.changeColor(topR: 0.07, topG: 0.13, topB: 0.26, topAlpha: 1.0, bottomR: 0.54, bottomG: 0.74, bottomB: 0.74, bottomAlpha: 1.0)
+        
+        gradientLayer.frame = view.bounds
+        
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +76,7 @@ class ViewController: UIViewController, NowScoreDelegate {
             
             pickedAnswer = false
             
-
+            
         }
         
         //チェック解答が合っているか(pickedAnswerとcorrectOrNotの値が一致しているか)
@@ -119,7 +127,12 @@ class ViewController: UIViewController, NowScoreDelegate {
             nextVC.delegate = self
         }
     }
-    
+
+    //resetボタンを押すと最高得点がリセットされる
+    @IBAction func resetScore(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "beforeCount")
+        maxScoreLabel.text = "0"
+    }
     
     
     
